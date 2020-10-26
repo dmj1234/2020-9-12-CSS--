@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   /* 1.原来盒子里面装有一个黑色半透明的盒子刚开始是看不见的
+    2.当我们鼠标经过的时候，这个黑色半透明的盒子就显示出来了 */
+    .box {
+        position: absolute;
+        width: 1500px;
+        height: 1200px;
+        
+    }
+    .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1500px;
+        height: 1200px;
+        background-color: rgba(0, 0, 0, .3) ;
+    }
+    .x {
+        display: none;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        width: 1500px;
+        height: 1200px; 
+        margin: 500px 600px;
+    }
+    .box a:hover .x {
+        display: block;
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <a href="#"><div class="mask"></div>
+            <div class="x"><img src="images/2.jpg" alt="" width="200px" height="200px" ></div>
+            <img src="images/3.jpg" alt="" width="1500px" height="1200px"></a>
+    </div>
+</body>
+</html>
